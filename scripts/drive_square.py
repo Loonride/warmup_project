@@ -114,6 +114,7 @@ class DriveSquare(object):
         stop spinning.
         """
         o = odom.pose.pose.orientation
+        # I found this function online to convert the orientation into a useable yaw
         (roll, pitch, yaw) = euler_from_quaternion([o.x, o.y, o.z, o.w])
         if self.start_angle is None:
             self.start_angle = yaw
