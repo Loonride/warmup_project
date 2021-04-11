@@ -13,15 +13,7 @@ class PersonFollower(object):
     def __init__(self):
         rospy.init_node('person_follower')
         self.cmd_vel_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
-        rospy.Subscriber('/odom', Odometry, self.process_odom)
         rospy.Subscriber('/scan', LaserScan, self.process_scan)
-
-    def process_odom(self, odom):
-        """ This is the callback for the odom subscription. It selects the task based on
-        the current task number, then passes in odom and args. If the task function returns
-        True, the task is complete and the task num is incremented.
-        """
-        return
 
     def process_scan(self, data):
         range_index = 0
