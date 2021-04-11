@@ -10,11 +10,11 @@ I had a number of helper functions dedicated to working with the start angle for
 
 The driving tasks set the linear velocity, and the angle task sets the angular velocity. I also added a very slow angular velocity during the linear travel tasks, in order to correct the angle that the robot is driving at. This is because I discovered that turning extremely slow will result in a more accurate resulting angle, but also takes too long, so I chose to have a faster turn with some slight correction during the linear drive.
 
-![Robot](https://github.com/Loonride/warmup_project/raw/dev/gifs/drive_square.gif)
+![Robot](https://github.com/Loonride/warmup_project/raw/main/gifs/drive_square.gif)
 
 ## Person Follower
 
-![Robot](https://github.com/Loonride/warmup_project/raw/dev/gifs/person_follower.gif)
+![Robot](https://github.com/Loonride/warmup_project/raw/main/gifs/person_follower.gif)
 
 ## Wall Follower
 
