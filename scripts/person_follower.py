@@ -63,23 +63,6 @@ class PersonFollower(object):
         t = Twist(v1, v2)
         self.cmd_vel_pub.publish(t)
 
-    def should_turn_right(self, target_angle):
-        """ This function determines if the robot should turn left or right to reach the
-        target angle the fastest based on the start angle.
-        """
-        right = True
-        if self.start_angle > 0:
-            if target_angle > self.start_angle:
-                right = False
-            elif target_angle < 0 and abs(target_angle) > abs(self.start_angle - math.pi):
-                right = False
-        else:
-            if target_angle < 0 and target_angle > self.start_angle:
-                right = False
-            elif target_angle >= 0 and target_angle < self.start_angle + math.pi:
-                right = False
-        return right
-
 if __name__ == '__main__':
     node = PersonFollower()
     rospy.spin()
