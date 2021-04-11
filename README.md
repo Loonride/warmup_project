@@ -18,7 +18,7 @@ The driving tasks set the linear velocity, and the angle task sets the angular v
 
 ## Wall Follower
 
-TODO
+![Robot](https://github.com/Loonride/warmup_project/raw/main/gifs/wall_follower.gif)
 
 # Challenges
 
